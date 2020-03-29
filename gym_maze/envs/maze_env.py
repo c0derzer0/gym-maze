@@ -71,6 +71,7 @@ class MazeEnv(gym.Env):
         return [seed]
 
     def step(self, action):
+        print(f'action type {type(action)}')
         if isinstance(action, int):
             self.maze_view.move_robot(self.ACTION[action])
         else:
